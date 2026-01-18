@@ -103,7 +103,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3 }
+  { threshold: 0.3 },
 );
 
 items.forEach((item) => observer.observe(item));
@@ -111,7 +111,7 @@ items.forEach((item) => observer.observe(item));
 // projects
 const proj = [
   {
-    img: "images/html5.svg",
+    img: "images/HTML5.svg",
     item: "Html5",
   },
   {
@@ -124,12 +124,12 @@ const proj = [
     item: "Photoshop",
   },
   {
-    img: "images/javascript.svg",
+    img: "images/javaScript.svg",
     item: "JavaScript",
   },
 
   {
-    img: "images/Mysql.svg",
+    img: "images/MySQL.svg",
     item: "Mysql",
   },
 
