@@ -111,10 +111,6 @@ items.forEach((item) => observer.observe(item));
 // projects
 const proj = [
   {
-    img: "images/HTML5.svg",
-    item: "Html5",
-  },
-  {
     img: "images/CSS3.svg",
     item: "Css3",
   },
@@ -122,15 +118,6 @@ const proj = [
   {
     img: "images/psd.svg",
     item: "Photoshop",
-  },
-  {
-    img: "images/javaScript.svg",
-    item: "JavaScript",
-  },
-
-  {
-    img: "images/MySQL.svg",
-    item: "Mysql",
   },
 
   {
