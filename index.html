@@ -63,6 +63,14 @@
                         </li>
 
 
+                        <li class="nav-item">
+                            <a id="nav-link" class="nav-link mx-lg-2 search blog" aria-current="page" href="#projects">
+                                Projects
+                                
+                            </a>
+                        </li>
+
+
                         
 
 
@@ -259,25 +267,23 @@
          </section>
 
          <!-- compteur -->
-         <section class="container global-animation" id="countauto">
+         <section class="container justify-content-center text-center items-center global-animation" id="countauto">
              <!-- compteur -->
                 <div class="row g-2" >
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         
                         <div class="text-center">
                             <span id="countitem">Projects</span><br>
                             <span id="counter">0</span>
 
                         </div>
-                                    
-                                    
-                                
+                                                                  
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                                
                         <div class="text-center">
-                            <span id="countitem">Experiences</span><br>
+                            <span id="countitem">Experience</span><br>
                             <span id="counter2">0</span>
 
                        </div>
@@ -286,18 +292,9 @@
                                
                     </div>
 
-                    <div class="col-md-3">
-                            
-                        <div class="text-center">
-                            <span id="countitem">Communities</span><br>
-                            <span id="counter3">0</span>
+                    
 
-                        </div>
-                                    
-                                
-                    </div>
-
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                             
                         <div class="text-center">
                             <span id="countitem">Clients</span><br>
@@ -376,6 +373,101 @@
 
         </section>
 
+        <!-- Projects -->
+        <section class="container global-animation" id="projects">
+             <div class="container py-5"  style="max-width: 100%; position: relative;">
+             <h2 id="experience" class="text-center mb-5">Projects</h2>
+
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card shadow-sm  h-100 hover-scale">
+                    <img src="images/IDE.png" class="card-img-top img-fluid" alt="IDE Image">
+                    <div class="p-2">
+                        <p class="text-center" id="tools-text">
+                            IDE (Bachelor 2)
+                        </p>
+                        <ul id="tools" class="list-unstyled text-center">
+                            <li>Python</li>
+                            <li>Js</li>
+                            <li>Java</li>
+                            <li>HTML5</li>
+                        </ul>
+  
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow-sm  h-100 hover-scale">
+                    <img src="images/Cenralized.png" class="card-img-top img-fluid" alt="IDE Image">
+                    <div class="p-2">
+
+                          <p class="text-center" id="tools-text">
+                            Centralize projects
+                        </p>
+                        <ul id="tools" class="list-unstyled text-center">
+                            <li>React Js</li>
+                            <li>Tailwindcss</li>
+                            <li>Vite</li>
+                            <a href="https://obed885.github.io/portfolio/" id="globe"><i class="bi bi-globe"></i></a>
+                
+                        </ul>
+
+                      
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow-sm  h-100 hover-scale">
+                    <img src="images/AICal.png" class="card-img-top img-fluid" alt="IDE Image">
+                    <div class="p-2">
+                          <p class="text-center" id="tools-text">
+                            AI Calculator (Bachelor 2)
+                        </p>
+                        <ul id="tools" class="list-unstyled text-center">
+                            <li>Python</li>
+                            <li>Tkinter</li>
+                            
+                        </ul>
+
+                      
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow-sm  h-100 hover-scale">
+                    <img src="images/Deep.png" class="card-img-top img-fluid" alt="IDE Image">
+                    <div class="p-2">
+                          <p class="text-center" id="tools-text">
+                            Translation (Bachelor 1)
+                        </p>
+                        <ul id="tools" class="list-unstyled text-center">
+                            <li>Python</li>
+                            <li>Tkinter</li>
+                            <li>Google api</li>
+                            
+                        </ul>
+
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+             </div>
+
+            <div class="text-center" id="more">
+                <a href="https://github.com/obed885/" class="btn scale-hover">
+                    Visit my repository <i class="bi bi-github"></i>
+                </a>
+
+            </div>
+             
+
+        </section>
+
         <!-- technologies -->
         <section class="container global-animation" id="technologies">
            
@@ -401,6 +493,8 @@
         </div>
         </section>
 
+        
+
     </main>
 
      <!-- Bouton Scroll Up -->
@@ -408,10 +502,7 @@
         <i class="bi bi-chevron-up"></i>
     </button>
 
-    <!-- Bouton Scroll Up -->
-    <button class="modebutton" id="mode" hidden>
-       <i class='fa fa-sun'></i>
-    </button>
+    
 
     
 
@@ -440,7 +531,7 @@
             
             <hr class="text-center">
 
-            <p>@2025 Online Portfolio | All rigths Reserved</p>
+            <p><span id="year"></span> Online Portfolio | All rigths Reserved</p>
             
 
         </footer>

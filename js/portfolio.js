@@ -21,7 +21,7 @@ const interval = setInterval(() => {
   counterElement.textContent = count;
 
   // Stop à 1000 (optionnel)
-  if (count >= 30) {
+  if (count >= 4) {
     clearInterval(interval);
   }
 }, 100); // toutes les 100ms
@@ -31,26 +31,12 @@ const counter2 = document.getElementById("counter2");
 
 // Intervalle pour incrémenter automatiquement
 const space = setInterval(() => {
-  count += 1; // augmente de 1 à chaque fois
+  count -= 1; // augmente de 1 à chaque fois
   counter2.textContent = count;
 
   // Stop à 1000 (optionnel)
-  if (count >= 2) {
+  if (count >= 0) {
     clearInterval(space);
-  }
-}, 100); // toutes les 100ms
-
-// counter 3
-const counter3 = document.getElementById("counter3");
-
-// Intervalle pour incrémenter automatiquement
-const space3 = setInterval(() => {
-  count += 1; // augmente de 1 à chaque fois
-  counter3.textContent = count;
-
-  // Stop à 1000 (optionnel)
-  if (count >= 20) {
-    clearInterval(space3);
   }
 }, 100); // toutes les 100ms
 
@@ -63,7 +49,7 @@ const space4 = setInterval(() => {
   counter4.textContent = count;
 
   // Stop à 1000 (optionnel)
-  if (count >= 30) {
+  if (count >= 10) {
     clearInterval(space4);
   }
 }, 100); // toutes les 100ms
@@ -141,8 +127,18 @@ const proj = [
   },
 
   {
-    img: "images/cshp.svg",
-    item: "C#",
+    img: "images/mysql.svg",
+    item: "Mysql",
+  },
+
+  {
+    img: "images/javaScript.svg",
+    item: "JavaScript",
+  },
+
+  {
+    img: "images/PHP.svg",
+    item: "PHP",
   },
 ];
 
@@ -182,12 +178,7 @@ function scrollproducts() {
           <i class='bi bi-star'></i>
           <i class='bi bi-star'></i>
 
-        </div>
-
-        <a href="#" id="icone"><i  class="bi bi-github"></i></a>
-        <a href="#" id="icone"><i  class="bi bi-youtube"></i></a>
-        <a href="#" id="icone"><i  class="bi bi-git"></i></a>
-        
+        </div>  
     </div>
           
 `;
@@ -269,3 +260,14 @@ const obsever = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".global-animation");
 hiddenElements.forEach((el) => obsever.observe(el));
+
+// footer
+
+const footeryear = () => {
+  const year = document.getElementById("year");
+  const SetYear = new Date();
+
+  year.textContent = SetYear.getFullYear();
+};
+
+footeryear();
