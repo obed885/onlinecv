@@ -135,12 +135,6 @@ const proj = [
     img: "images/javascript-logo.svg",
     item: "JavaScript",
   },
-
-  {
-    img: "images/java.svg",
-    item: "Java",
-  },
-
   {
     img: "images/PHP.svg",
     item: "PHP",
