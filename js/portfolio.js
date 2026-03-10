@@ -127,12 +127,12 @@ const proj = [
   },
 
   {
-    img: "images/mysql.svg",
+    img: "images/mysqldb.svg",
     item: "Mysql",
   },
 
   {
-    img: "images/javaScript.svg",
+    img: "images/javascript-logo.svg",
     item: "JavaScript",
   },
 
