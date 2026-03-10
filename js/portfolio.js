@@ -137,6 +137,11 @@ const proj = [
   },
 
   {
+    img: "images/java.svg",
+    item: "Java",
+  },
+
+  {
     img: "images/PHP.svg",
     item: "PHP",
   },
