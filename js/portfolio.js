@@ -193,7 +193,7 @@ let typed = new Typed("#element", {
   strings: [
     "I'm Front-End juniorDev.",
     "I'm UI/UX Designer",
-    "I'm Junior Software Engineer",
+    "I'm Junior Software Eng.",
   ],
   typeSpeed: 100,
   backSpeed: 180,

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/about-img.png" type="image/x-icon">
     <title>Portfolio - Obed NGILIBUMA</title>
-
     <!-- SEO -->
     <meta name="description" content="Obed Ngilibuma lala">
     <meta name="keywords" content="portfolio, obed, Ngilibuma" >
@@ -96,12 +95,11 @@
 
                 </div>
 
-                
-                
+    
 
                 <!-- menu bar -->
                 <button id="btn-open" class="navbar-toggler pe-8" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon white"></span>
                 </button>
             
 
@@ -120,16 +118,26 @@
     <!-- hero-section -->
     <main>
             
-        <section  id="hero-section">
+            <section  id="hero-section">
+
+                        <div class="animated-bg">
+                            <img src="https://img.freepik.com/photos-gratuite/codage-programme-informatique-ecran_53876-138060.jpg?semt=ais_hybrid&w=740&q=80" alt="Background">
+                        </div>
+                        <div class="overlay"></div>
 
                 <div class="container global-animation hero">
                     <div class="container" id="img">
+                    
                     <div class="row g-2">
                     <!-- left side details -->
                     <div class="col-md-6" id="left-content">
+                        
+
                         <!-- ecris -->
                         <div>
-                            <h4 id="name">Obed Ngilibuma</h4>
+                            <h4 id="name">
+                                Obed <span>Ngilibuma</span>
+                            </h4>
 
                             <div class="typer">
                                 <span id="element"></span>
@@ -148,7 +156,7 @@
                             <div class="d-flex" id="left-buttons">
                                 <button 
                                     onclick="window.location.href= 'https://wa.me/243987781265?text=Bonjour, Je vous contacte pour un projet de développement. Merci de me donner le feedback.'" >contact <i class="bi bi-whatsapp"></i></button>
-                                <button id="ght" onclick="window.location.href='tel:+243987781265'" >See <i class="bi bi-telephone"></i></button>
+                                <button id="ght" onclick="window.location.href='tel:+243987781265'" >Call <i class="bi bi-telephone"></i></button>
                                 
                             </div>
                         </div>
@@ -156,18 +164,67 @@
                     </div>
                     
 
-
-                    
-
-                    <!-- Right side details -->
+                    <!-- Right side -->
                     <div class="col-md-6" id="img-ch">
-                        <!-- img-side -->
-                        <div id="hero-img"></div>
-                
+
+                        <div class="image-orbit-container">
+                        
+                            <!-- Cercles d'orbite visibles -->
+                            <div class="orbit-ring"></div>
+                            <div class="orbit-ring orbit-ring-2"></div>
+                            <div class="orbit-ring orbit-ring-3"></div>
+                            
+                            <!-- Orbite 1 - Rotation horaire -->
+                            <div class="orbit">
+                                <div class="orbiting-element element-1" data-tooltip="Photographie">
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="orbiting-element element-2" data-tooltip="Design">
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="orbiting-element element-3" data-tooltip="Développement">
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="orbiting-element element-4" data-tooltip="Innovation">
+                                    <span class="icon"></span>
+                                </div>
+                            </div>
+
+                            <!-- Orbite 2 - Rotation anti-horaire -->
+                            <div class="orbit-reverse">
+                                <div class="orbiting-element element-5" data-tooltip="Musique">
+                                    <span class="icon"></span>
+                                        
+                                </div>
+                                <div class="orbiting-element element-6" data-tooltip="Vidéo">
+                                    <span class="icon"></span>
+                                       
+                                </div>
+                            </div>
+
+                            <!-- Orbite 3 - Rotation lente -->
+                            <div class="orbit-slow">
+                                <div class="orbiting-element element-7" data-tooltip="3D">
+                                    <span class="icon"></span>
+                                        
+                                </div>
+                                <div class="orbiting-element element-8" data-tooltip="IA">
+                                    <span class="icon"></span>
+                                        
+                                </div>
+                            </div>
+
+                            <!-- Image centrale -->
+                            
+                                <!-- img-side -->
+                                <div id="hero-img"></div>
+                            
+                        </div>
+                    
+                        </div>
+                        
+                        
                     </div>
-                    
-                    
-                </div>
 
                 </div>
                 </div>
@@ -177,7 +234,7 @@
 
      <!-- autres -->
 
-    <main class="container">
+    <main class="other-sections">
 
          <!-- Skills -->
         <section class="container skills global-animation" id="skills">
@@ -247,7 +304,7 @@
                 </div>
 
                 <!-- Me -->
-                 <div class="col-md-7" id="img">
+                 <div class="col-md-7 container" id="img">
                     <h1 id="who"><span id="wh">Who</span> am I ?</h1>
 
                     <!-- presentation -->
@@ -272,6 +329,10 @@
 
             </div>
          </section>
+
+        
+
+        
 
          <!-- compteur -->
          <section class="container justify-content-center text-center items-center global-animation" id="countauto">
@@ -327,7 +388,7 @@
             <div class="timeline">
 
                 <div class="timeline-item left">
-                <div class="card p-4">
+                <div class="card p-4" id="cardbg">
                     <i class="fa-solid fa-pen-nib icon"></i>
                     <h5 class="mt-2">UX Designer</h5>
                     <small class="text-success">2025 – 2026</small>
@@ -339,7 +400,7 @@
                 </div>
 
                 <div class="timeline-item right">
-                <div class="card p-4">
+                <div class="card p-4" id="cardbg">
                     <i class="fa-solid fa-code icon"></i>
                     <h5 class="mt-2">Frontend Developer</h5>
                     <small class="text-success">2024 – currently</small>
@@ -351,7 +412,7 @@
                 </div>
 
                 <div class="timeline-item left">
-                <div class="card p-4">
+                <div class="card p-4" id="cardbg">
                     <i class="fa-solid fa-graduation-cap icon"></i>
                     <h5 class="mt-2">Computer Science student</h5>
                     <small class="text-success">2024 – currently </small>
@@ -365,7 +426,7 @@
                 </div>
 
                 <div class="timeline-item right">
-                <div class="card p-4">
+                <div class="card p-4" id="cardbg">
                     <i class="fa-solid fa-graduation-cap icon"></i>
                     <h5 class="mt-2">Business English student</h5>
                     <small class="text-success">2025 – 2026</small>
@@ -388,7 +449,7 @@
 
             <div class="row g-4">
                 <div class="col-md-3">
-                    <div class="card shadow-sm  h-100 hover-scale">
+                    <div class="card shadow-sm  h-100 hover-scale" id="cardbg">
                     <img src="images/IDE.png" class="card-img-top img-fluid" alt="IDE Image">
                     <div class="p-2">
                         <p class="text-center" id="tools-text">
@@ -406,7 +467,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="card shadow-sm  h-100 hover-scale">
+                    <div class="card shadow-sm  h-100 hover-scale" id="cardbg">
                     <img src="images/Cenralized.png" class="card-img-top img-fluid" alt="IDE Image">
                     <div class="p-2">
 
@@ -427,13 +488,13 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="card shadow-sm  h-100 hover-scale">
+                    <div class="card shadow-sm  h-100 hover-scale" id="cardbg">
                     <img src="images/AICal.png" class="card-img-top img-fluid" alt="IDE Image">
                     <div class="p-2">
                           <p class="text-center" id="tools-text">
                             AI Calculator (Bachelor 2)
                         </p>
-                        <ul id="tools" class="list-unstyled text-center">
+                        <ul id="tools" class="list-unstyled text-center" >
                             <li>Python</li>
                             <li>Tkinter</li>
                             
@@ -445,7 +506,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="card shadow-sm  h-100 hover-scale">
+                    <div class="card shadow-sm  h-100 hover-scale" id="cardbg">
                     <img src="images/Deep.png" class="card-img-top img-fluid" alt="IDE Image">
                     <div class="p-2">
                           <p class="text-center" id="tools-text">
@@ -544,8 +605,6 @@
         </footer>
 
          
-
-
 
 
     
