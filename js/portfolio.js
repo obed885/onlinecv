@@ -194,6 +194,7 @@ let typed = new Typed("#element", {
     "I'm Front-End juniorDev.",
     "I'm UI/UX Designer",
     "I'm Junior Software Eng.",
+    "I'm an Aspire Alumnus",
   ],
   typeSpeed: 100,
   backSpeed: 180,
