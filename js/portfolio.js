@@ -20,11 +20,10 @@ const interval = setInterval(() => {
   count += 1; // augmente de 1 à chaque fois
   counterElement.textContent = count;
 
-  // Stop à 1000 (optionnel)
   if (count >= 4) {
     clearInterval(interval);
   }
-}, 100); // toutes les 100ms
+}, 100);
 
 // counter 2
 const counter2 = document.getElementById("counter2");
@@ -34,11 +33,10 @@ const space = setInterval(() => {
   count -= 1; // augmente de 1 à chaque fois
   counter2.textContent = count;
 
-  // Stop à 1000 (optionnel)
-  if (count >= 0) {
+  if (count >= 2) {
     clearInterval(space);
   }
-}, 100); // toutes les 100ms
+}, 100);
 
 // counter 4
 const counter4 = document.getElementById("counter4");
@@ -48,11 +46,10 @@ const space4 = setInterval(() => {
   count += 1; // augmente de 1 à chaque fois
   counter4.textContent = count;
 
-  // Stop à 1000 (optionnel)
-  if (count >= 10) {
+  if (count >= 2) {
     clearInterval(space4);
   }
-}, 100); // toutes les 100ms
+}, 100);
 
 // hero img
 
