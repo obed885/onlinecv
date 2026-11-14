@@ -12,44 +12,29 @@ window.addEventListener("scroll", function () {
 });
 
 // count
-let count = 0;
-const counterElement = document.getElementById("counter");
+function animateCounter(elementId, target, duration) {
+      const element = document.getElementById(elementId);
+      let start = 0;
+      const increment = target / (duration / 16);
 
-// Intervalle pour incrémenter automatiquement
-const interval = setInterval(() => {
-  count += 1; // augmente de 1 à chaque fois
-  counterElement.textContent = count;
+      const timer = setInterval(() => {
+          start += increment;
 
-  if (count >= 4) {
-    clearInterval(interval);
-  }
-}, 100);
+          if (start >= target) {
+              element.textContent = target;
+              clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(start);
+            }
+        }, 16);
+    }
 
-// counter 2
-const counter2 = document.getElementById("counter2");
+    window.addEventListener("DOMContentLoaded", () => {
+        animateCounter("counter", 9, 2000);
+        animateCounter("counter2", 2, 2000);
+        animateCounter("counter4", 1, 2000);
+    });
 
-// Intervalle pour incrémenter automatiquement
-const space = setInterval(() => {
-  count -= 1; // augmente de 1 à chaque fois
-  counter2.textContent = count;
-
-  if (count >= 2) {
-    clearInterval(space);
-  }
-}, 100);
-
-// counter 4
-const counter4 = document.getElementById("counter4");
-
-// Intervalle pour incrémenter automatiquement
-const space4 = setInterval(() => {
-  count += 1; // augmente de 1 à chaque fois
-  counter4.textContent = count;
-
-  if (count >= 2) {
-    clearInterval(space4);
-  }
-}, 100);
 
 // hero img
 
@@ -184,6 +169,123 @@ function scrollproducts() {
 }
 
 scrollproducts();
+
+
+// Projects
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const carousel = document.getElementById("projectsCarousel");
+    const prevBtn = document.getElementById("prevProject");
+    const nextBtn = document.getElementById("nextProject");
+    const indicators = document.getElementById("projectIndicators");
+
+    if (!carousel || !prevBtn || !nextBtn || !indicators) return;
+
+    const items = carousel.querySelectorAll(".project-item");
+
+    if (items.length === 0) return;
+
+    let currentIndex = 0;
+
+    function getVisibleItems() {
+        if (window.innerWidth <= 576) return 1;
+        if (window.innerWidth <= 991) return 2;
+        return 4;
+    }
+
+    function getMaxIndex() {
+        return Math.max(0, items.length - getVisibleItems());
+    }
+
+    function getStep() {
+        if (items.length === 0) return 0;
+
+        const style = window.getComputedStyle(carousel);
+        const gap = parseFloat(style.columnGap) || 20;
+
+        return items[0].getBoundingClientRect().width + gap;
+    }
+
+    function updateCarousel() {
+        currentIndex = Math.min(currentIndex, getMaxIndex());
+
+        carousel.scrollTo({
+            left: currentIndex * getStep(),
+            behavior: "smooth"
+        });
+
+        updateIndicators();
+    }
+
+    function updateIndicators() {
+        const dots = indicators.querySelectorAll("span");
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= getMaxIndex();
+    }
+
+    function createIndicators() {
+        indicators.innerHTML = "";
+
+        for (let i = 0; i <= getMaxIndex(); i++) {
+            const dot = document.createElement("span");
+
+            dot.addEventListener("click", () => {
+                currentIndex = i;
+                updateCarousel();
+            });
+
+            indicators.appendChild(dot);
+        }
+
+        updateIndicators();
+    }
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < getMaxIndex()) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    carousel.addEventListener("scroll", () => {
+        const step = getStep();
+
+        if (step > 0) {
+            currentIndex = Math.round(carousel.scrollLeft / step);
+            updateIndicators();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        createIndicators();
+        updateCarousel();
+    });
+
+    createIndicators();
+
+});
+
+
+
+
+
+
+
 
 // Typer
 let typed = new Typed("#element", {
