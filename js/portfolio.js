@@ -30,7 +30,7 @@ function animateCounter(elementId, target, duration) {
     }
 
     window.addEventListener("DOMContentLoaded", () => {
-        animateCounter("counter", 10, 2000);
+        animateCounter("counter", 11, 2000);
         animateCounter("counter2", 2, 2000);
         animateCounter("counter4", 1, 2000);
     });
